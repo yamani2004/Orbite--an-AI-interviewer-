@@ -11,6 +11,8 @@ Orbite is a privacy-first interview practice platform for computer fundamentals,
 ## Run locally
 
 1. Create a Supabase project and run [supabase/schema.sql](supabase/schema.sql) in its SQL editor.
+// added some comments in develop 
+altaf ahmed
    Enable **Anonymous sign-ins** in Supabase Auth for the frictionless practice flow, or replace it with your preferred email/OAuth sign-in screen before release.
 2. Copy `frontend/.env.example` to `frontend/.env` and add your Supabase URL/key and API URL.
 3. For a local smoke test, start the API directly; it uses an in-memory H2 database by default. To use Supabase, set the environment values in `backend/.env.example` and activate the `supabase` profile.
