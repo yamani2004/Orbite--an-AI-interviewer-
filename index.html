@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orbite — Interview practice, made human</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <aside class="sidebar">
+      <a class="brand" href="#"><span class="brand-mark">O</span><span>orbite</span></a>
+      <nav>
+        <a class="nav-link active" href="#practice"><span>⌘</span> Practice</a>
+        <a class="nav-link" href="#progress"><span>◔</span> My progress</a>
+        <a class="nav-link" href="#rooms"><span>◌</span> Live rooms</a>
+        <a class="nav-link" href="#library"><span>▤</span> Question library</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <a class="nav-link" href="#settings"><span>⚙</span> Settings</a>
+        <div class="profile"><div class="avatar">AS</div><div><strong>Alex Singh</strong><small>Student plan</small></div><button aria-label="Open profile">⌄</button></div>
+      </div>
+    </aside>
+
+    <main>
+      <header>
+        <div class="crumb"><span>YOUR PRACTICE SPACE</span><i></i><b>MONDAY, AUG 17</b></div>
+        <div class="header-actions"><button class="icon-button" aria-label="Notifications">♧<em></em></button><button class="help">?</button></div>
+      </header>
+
+      <section class="hero" id="practice">
+        <div class="hero-copy">
+          <p class="eyebrow">SAY HELLO TO THE HOT SEAT</p>
+          <h1>Practice until<br /><em>it feels natural.</em></h1>
+          <p class="lede">Sharpen your thinking with an interviewer that listens, follows up, and gives you thoughtful feedback.</p>
+          <div class="topic-row">
+            <button class="topic selected" data-topic="Computer Fundamentals"><span>01</span> Computer fundamentals</button>
+            <button class="topic" data-topic="System Design"><span>02</span> System design</button>
+          </div>
+          <div class="start-row"><button class="start-button" id="startInterview">Start a practice interview <span>→</span></button><p><b>25 min</b> · Voice-first · Private</p></div>
+        </div>
+        <div class="hero-art" aria-label="Abstract illustration of an interviewer">
+          <div class="sun"></div><div class="arch arch-one"></div><div class="arch arch-two"></div><div class="arch arch-three"></div>
+          <div class="mic-orb"><span>♬</span><i></i><i></i><i></i></div>
+          <div class="art-label"><span>AI INTERVIEWER</span><b>Ready when you are</b></div>
+        </div>
+      </section>
+
+      <section class="bottom-grid">
+        <div class="today-card">
+          <div class="section-heading"><div><p class="eyebrow">TODAY'S MOMENTUM</p><h2>Keep the thread going.</h2></div><button class="text-button">View activity <span>→</span></button></div>
+          <div class="stat-grid"><div class="stat"><b>12</b><span>questions<br />answered</span></div><div class="stat"><b>3<span class="small">/4</span></b><span>sessions this<br />week</span></div><div class="stat ring-stat"><div class="ring"><b>78</b><span>pts</span></div><span>communication<br />score</span></div></div>
+          <div class="streak"><span class="fire">✦</span><b>4 day streak</b><div class="days"><i class="done">M</i><i class="done">T</i><i class="done">W</i><i class="done">T</i><i>F</i><i>S</i><i>S</i></div></div>
+        </div>
+        <div class="live-card" id="rooms">
+          <div class="live-icon">◉</div><p class="eyebrow">LIVE, PERSON TO PERSON</p><h2>Try it with a real human.</h2><p class="live-copy">Get matched for a focused, respectful 1:1 mock interview.</p>
+          <div class="safety-line"><span>✓</span> Consent-led · Moderated · Leave anytime</div>
+          <button class="join-button" id="openRoom">Explore live rooms <span>↗</span></button>
+        </div>
+      </section>
+    </main>
+
+    <div class="interview-overlay" id="interviewOverlay" aria-hidden="true">
+      <div class="session-shell">
+        <div class="session-top"><a class="brand light" href="#"><span class="brand-mark">O</span><span>orbite</span></a><div class="session-status"><span class="record-dot"></span> PRACTICE SESSION <b id="timer">25:00</b></div><button class="exit" id="exitInterview">Exit session</button></div>
+        <div class="interview-main">
+          <div class="interviewer-panel"><div class="speaker-visual"><div class="speaker-face">AI</div><div class="sound-waves"><i></i><i></i><i></i><i></i><i></i></div></div><p class="eyebrow">YOUR INTERVIEWER · MAYA</p><h2>“Let’s get started.”</h2><p id="interviewerText">In your own words, what happens from the moment you type a URL into a browser until a web page appears?</p><button class="replay" id="replayQuestion">↻ Replay question</button></div>
+          <div class="answer-panel"><p class="eyebrow">QUESTION <span id="questionCount">01 / 05</span></p><div class="question-type"><span>COMPUTER FUNDAMENTALS</span><b>Warm-up</b></div><div class="listen-indicator"><span></span><p id="listenLabel">Your interviewer is waiting</p></div><div class="session-controls"><button class="mic-button" id="micButton">⌁</button><button class="end-answer" id="answerButton">Begin answering <span>→</span></button></div><p class="shortcut">Press <kbd>space</kbd> to mute / unmute</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="roomModal" aria-hidden="true"><div class="room-modal"><button class="modal-close" id="closeRoom">×</button><p class="eyebrow">LIVE 1:1 INTERVIEWS</p><h2>Practice with care.</h2><p>You'll be paired with another verified learner for a structured 25-minute practice session.</p><div class="rule"><span>01</span><div><b>Mutual consent, always</b><small>Both people agree to the session rules before joining.</small></div></div><div class="rule"><span>02</span><div><b>A focused, respectful space</b><small>No recording, harassment, discrimination, or personal questions.</small></div></div><div class="rule"><span>03</span><div><b>You stay in control</b><small>Leave or report at any time. Trained moderation follows up.</small></div></div><label class="consent"><input type="checkbox" id="consent" /> <span>I understand and agree to the community guidelines.</span></label><button class="find-match" id="findMatch" disabled>Find a practice partner <span>→</span></button></div></div>
+    <script src="app.js"></script>
+  </body>
+</html>

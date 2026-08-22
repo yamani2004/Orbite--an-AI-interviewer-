@@ -1,0 +1,5 @@
+# Created at 2026-08-22T14:07:35.078
+Boot Manifest-JAR contains absolute paths in classpath 'D:\realistic-orbite\realistic\Orbite-interviewer-realistic\backend\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
